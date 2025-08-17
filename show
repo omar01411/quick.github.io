@@ -1,0 +1,7 @@
+
+import 'dart:js' as js;
+
+void showWebNotification(String title, String body) {
+  js.context.callMethod('Notification.requestPermission', []);
+  js.context.callMethod('createNotification', [title, body]);
+}
